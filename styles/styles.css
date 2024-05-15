@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: system-ui, sans-serif;
+  font-family: monospace, sans-serif;
   color: #F8E03D;
   width: 100%;
   overflow: hidden;
@@ -20,14 +20,18 @@ body {
   background-color: #1e1e1e;
   width: 90%;
   min-width: 600px;
-  max-width: 1200px;
+  max-width: 900px;
   height: 90%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 0.15em;
   border-radius: 5px;
+}
+
+button {
+  font-family: inherit;
+  font-size: 1rem;
 }
 
 /* Main Bottom */
@@ -38,12 +42,66 @@ body {
 .top__btns {
   width: 100%;
   display: flex;
+  gap: 0.1em;
+  background-color: #f0e8af;
+  padding: 0.15em;
 }
 .top__btns button {
   width: max-content;
   flex: 1;
 }
-.top__btns .speed__contolers {
+.top__btns .speed__controlers {
   display: flex;
   flex: 1;
+  gap: 0.075em;
+}
+.top__btns .speed__controlers > button {
+  padding: 2em 1em;
+}
+.speed__controlers .btn__minus {
+  width: 50px;
+  height: 10px;
+  background: #1e1e1e;
+}
+.speed__controlers .btn__plus {
+  width: 50px;
+  height: 10px;
+  background: #1e1e1e;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+.speed__controlers .btn__plus:after {
+  content: '';
+  position: absolute;
+  width: 45px;
+  height: 10px;
+  background: #1e1e1e;
+  transform: rotate(90deg);
+}
+.speed__controlers--indicator {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.075em;
+}
+.speed__controlers--indicator > p {
+  text-align: right;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  background: #EFEFEF;
+  border: 1px solid rgb(50, 50, 50);
+  color: #1e1e1e;
+  padding: 5px;
+}
+.speed__controlers--indicator > input {
+  padding: 3px 5px;
+  text-align: right;
+  font-family: inherit;
+  font-size: 2rem;
+  max-width: 175px;
 }
