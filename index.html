@@ -12,8 +12,8 @@
       <!-- Top -->
       <div class="main__screen--top">
         <div class="btn__group">
-          <button class="btn btn--single">BUTTON</button>
-          <button class="btn btn--single">LEIM PIMPE</button>
+          <button type="button" class="btn btn--single">BUTTON</button>
+          <button type="button" class="btn btn--single">LEIM PIMPE</button>
         </div>
         <p class="speed__indicator">0</p>
       </div>
@@ -22,7 +22,25 @@
       <div class="main__screen--middle">hello</div>
 
       <!-- Bottom -->
-      <div class="main__screen--bottom"></div>
+      <div class="main__screen--bottom">
+        <div class="top__btns">
+          <button type="button">IDLE</button>
+          <button type="button">START</button>
+          <button type="button">FEEDER BELT</button>
+          <div class="speed__contolers">
+            <button type="button">-</button>
+            <div class="speed__controlers--indicator">
+              <p>FEEDER BELT SPEED</p>
+              <input type="text" placeholder="4800">
+            </div>
+            <button type="button">+</button>
+          </div>
+          <button type="button">FEEDER</button>
+        </div>
+        
+        <div class="mid__btns"></div>
+        <div class="btm__btns"></div>
+      </div>
     </main>
   </body>
 </html>
