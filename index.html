@@ -6,9 +6,16 @@
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="./styles/styles.css" />
     <script type="module" src="script.js"></script>
+    <!-- Fonts -->
+    <!-- --- Archivo --- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
   </head>
   <body>
     <main class="main__screen">
+      <p class="panel__header">QUICKPANEL</p>
+      <p class="panel__footer">Pro-face</p>
       <!-- Top -->
       <div class="main__screen--top">
         <div class="btn__group">
@@ -33,7 +40,7 @@
             </button>
             <div class="speed__controlers--indicator">
               <p>FEEDER BELT SPEED</p>
-              <input type="text" placeholder="4800">
+              <input type="text" placeholder="4800" disabled>
             </div>
             <button type="button">
               <div class="btn__plus"></div>
@@ -42,7 +49,10 @@
           <button type="button">FEEDER</button>
         </div>
 
-        <div class="mid__btns"></div>
+        <div class="mid__btns">
+          <button type="button" class="mid__btns--lft">Placeholder</button>
+          <button type="button" class="mid__btns--cntr">Counter</button>
+        </div>
         <div class="btm__btns"></div>
       </div>
     </main>
