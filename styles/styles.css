@@ -1,6 +1,7 @@
 :root {
-  --cl-main: hsl(51, 80%, 50%);
-  --cl-main-hover: hsl(51, 90%, 60%);
+  --cl-main: hsl(40, 90%, 56%);
+  --cl-main-hover: hsl(45, 90%, 60%);
+  --cl-main-faded: hsl(45, 90%, 20%);
 }
 
 *,
@@ -21,11 +22,10 @@ body {
   display: grid;
   place-items: center;
   min-height: 100vh;
-  border: 12px solid #131313;
-  background: rgb(36,38,47);
-  background: -moz-linear-gradient(112.1deg, rgb(36, 45, 77) 11.4%, rgb(59, 75, 126) 70.2%);
-  background: -webkit-linear-gradient(112.1deg, rgb(36, 45, 77) 11.4%, rgb(59, 75, 126) 70.2%);
-  background: linear-gradient(112.1deg, rgb(36, 45, 77) 11.4%, rgb(59, 75, 126) 70.2%);
+  background: rgb(24, 26, 33);
+  background: -moz-linear-gradient(112.1deg, rgb(20, 24, 37) 11.4%, rgb(38, 46, 72) 70.2%);
+  background: -webkit-linear-gradient(112.1deg, rgb(20, 24, 37) 11.4%, rgb(38, 46, 72) 70.2%);
+  background: linear-gradient(112.1deg, rgb(20, 24, 37) 11.4%, rgb(38, 46, 72) 70.2%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#24262f",endColorstr="#3c404e",GradientType=1);
 }
 
@@ -87,14 +87,38 @@ body {
   border-width: 20px 0 20px 36.6px;
   border-color: transparent transparent transparent #111111;
 }
+.full__screen {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  cursor: pointer;
+  color: whitesmoke;
+  transition: all 0.2s ease;
+}
+.full__screen:hover {
+  transform: scale(1.05)
+}
 
 /* ============ */
+.main__screen--middle {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  padding: 1em 0em;
+}
+img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: contain;
+  object-position: center;
+}
 
+/* ============ */
 .main__screen {
   background-color: #111111;
   width: 90%;
   min-width: 600px;
-  max-width: 900px;
+  max-width: 1100px;
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -140,6 +164,7 @@ body {
 button {
   font-family: inherit;
   font-size: 1.05rem;
+  font-weight: 400;
   border-top: 4px solid #dadada75;
   border-left: 4px solid #e0e0e08d;
   border-right: 4px solid #1e1e1e63;
@@ -148,9 +173,9 @@ button {
   /* background-image: url("../assets/textures/cream-pixels.png");
       background-repeat: repeat/no-repeat; */
   box-shadow: 
-      0px 0px 5px rgba(36,38,47,1),
-      0px 0px 15px hsl(51, 90%, 15%);
+      0px 0px 20px hsl(51, 95%, 15%);
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 .btn--single {
   padding: 0.5em 1.5em;
@@ -160,10 +185,27 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.2s ease;
 }
 button:hover {
   background-color: var(--cl-main-hover);
 }
+.button--selected {
+  background: transparent;
+  color: var(--cl-main);
+  border-top: 4px solid var(--cl-main-faded);
+  border-left: 4px solid var(--cl-main-faded);
+  border-right: 4px solid var(--cl-main);
+  border-bottom: 4px solid var(--cl-main);
+  border-style: outset;
+  transition: all 0.2s ease;
+}
+button.button--selected:hover {
+  background-color: var(--cl-main);
+  color: #131313;
+}
+
+
 
 /* Main Top */
 .main__screen--top {
@@ -203,7 +245,6 @@ button:hover {
 .top__btns .speed__controlers {
   display: flex;
   flex: 1;
-  gap: 0.075em;
 }
 .top__btns .speed__controlers > button {
   padding: 2em 1em;
@@ -266,7 +307,6 @@ button:hover {
   background: #1e1e1e;
   margin: 0.15em 0.3em;
   letter-spacing: 2px;
-  box-shadow: 0px 0px 15px hsl(51, 90%, 15%);
 }
 .speed__controlers--indicator > input::placeholder {
   color: var(--cl-main);
@@ -278,15 +318,14 @@ button:hover {
 .mid__btns {
   width: 100%;
   display: flex;
-  gap: 0.1em;
   background-color: #f0e8af;
-  padding: 0 0.15em 0 0.15em;
 }
 .mid__btns > button {
   display: flex;
   justify-content: center;
   font-family: inherit;
   text-align: center;
+  padding: 0.15em;
 }
 .mid__btns--lft {
   width: 74%;
