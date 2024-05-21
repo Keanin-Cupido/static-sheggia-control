@@ -116,8 +116,7 @@ img {
 /* ============ */
 .main__screen {
   background-color: #111111;
-  width: 90%;
-  min-width: 600px;
+  width: 100%;
   max-width: 1100px;
   height: fit-content;
   display: flex;
@@ -165,17 +164,17 @@ button {
   font-family: inherit;
   font-size: 1.05rem;
   font-weight: 400;
-  border-top: 4px solid #dadada75;
-  border-left: 4px solid #e0e0e08d;
-  border-right: 4px solid #1e1e1e63;
-  border-bottom: 4px solid #1414146d;
+  border-top: 6px solid #dadada75;
+  border-left: 6px solid #e0e0e08d;
+  border-right: 6px solid #1e1e1e63;
+  border-bottom: 6px solid #1414146d;
   background-color: var(--cl-main);
   /* background-image: url("../assets/textures/cream-pixels.png");
       background-repeat: repeat/no-repeat; */
   box-shadow: 
       0px 0px 20px hsl(51, 95%, 15%);
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.1s ease;
 }
 .btn--single {
   padding: 0.5em 1.5em;
@@ -185,7 +184,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.2s ease;
+  transition: all 0.1s ease;
 }
 button:hover {
   background-color: var(--cl-main-hover);
@@ -193,10 +192,10 @@ button:hover {
 .button--selected {
   background: transparent;
   color: var(--cl-main);
-  border-top: 4px solid var(--cl-main-faded);
-  border-left: 4px solid var(--cl-main-faded);
-  border-right: 4px solid var(--cl-main);
-  border-bottom: 4px solid var(--cl-main);
+  border-top: 6px solid var(--cl-main-faded);
+  border-left: 6px solid var(--cl-main-faded);
+  border-right: 6px solid var(--cl-main);
+  border-bottom: 6px solid var(--cl-main);
   border-style: outset;
   transition: all 0.2s ease;
 }
@@ -205,9 +204,7 @@ button.button--selected:hover {
   color: #131313;
 }
 
-
-
-/* Main Top */
+/* ======= Main Top ======= */
 .main__screen--top {
   box-sizing: border-box;
   width: 80%;
@@ -227,6 +224,23 @@ button.button--selected:hover {
 }
 .main__screen--top .speed__indicator {
   font-size: 2rem;
+}
+
+/* ======= Main Middle ======= */
+.main__screen--middle {
+  width: 100%;
+  height: 100%;
+}
+.main__screen--middle .machine__grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  padding: 2em;
+}
+.main__screen--middle .machine__grid > div {
+  height: 50px;
+  border: 2px solid rgba(0, 0, 0, 0.618);
+  background: rgba(255, 0, 0, 0.208);
 }
 
 /* ======= Main Bottom ======= */
@@ -294,7 +308,7 @@ button.button--selected:hover {
   background: var(--cl-main);
   color: #1e1e1e;
   padding: 5px;
-  border-bottom: 3px solid #14141494;
+  border-bottom: 4px solid #1c1c1c66;
 }
 .speed__controlers--indicator > input {
   box-sizing: border-box;
@@ -317,6 +331,7 @@ button.button--selected:hover {
 /* Mid Buttons */
 .mid__btns {
   width: 100%;
+  height: 42px;
   display: flex;
   background-color: #f0e8af;
 }
@@ -328,17 +343,17 @@ button.button--selected:hover {
   padding: 0.15em;
 }
 .mid__btns--lft {
-  width: 74%;
+  width: 74.5%;
 }
 .mid__btns--cntr {
-  width: 26%;
+  width: 25.5%;
 }
 
 /* Btm Buttons */
 .btm__btns {
   width: 100%;
-  height: 100%;
-  margin: 0;
+  height: 42px;
+  margin-top: 8px;
   padding: 0;
   display: flex;
   flex-direction: row;
@@ -389,7 +404,6 @@ button.button--selected:hover {
 }
 .btm__btns .btn__fastforward {
   width: 47px;
-  /* height: 10px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -402,29 +416,29 @@ button.button--selected:hover {
   border-color: transparent transparent transparent #111111;
 }
 .btm__btns .counter--indicator {
-  width: 26%;
-  height: 58px;
+  width: 25.5%;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--cl-main);
-  border-top: 4px solid #dadada75;
-  border-left: 4px solid #e0e0e08d;
-  border-right: 4px solid #1e1e1e63;
-  border-bottom: 4px solid #1414146d;
+  border-top: 6px solid #dadada75;
+  border-left: 6px solid #e0e0e08d;
+  border-right: 6px solid #1e1e1e63;
+  border-bottom: 6px solid #1414146d;
   box-shadow: 0px 0px 15px hsl(51, 90%, 15%);
 }
 .btm__btns .counter--indicator > input {
   box-sizing: border-box;
-  padding: 1px 5px;
+  padding: 3px 5px;
   text-align: right;
   font-family: inherit;
   font-size: 1.5rem;
   max-width: 95%;
-  height: 36px;
+  height: 42px;
   background: #1e1e1e;
   margin: 0.15em 0.3em;
   letter-spacing: 2px;
+  padding-right: 0.5em;
 }
 .btm__btns .counter--indicator > input::placeholder {
   color: var(--cl-main);
