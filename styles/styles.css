@@ -147,16 +147,16 @@ img {
 }
 .panel__footer {
   position: absolute;
-  right: -25px;
-  bottom: -86px;
-  font-family: inherit;
+  right: -22px;
+  bottom: -90px;
+  font-family: "Anton", sans-serif;
   font-weight: bold;
-  font-size: 1.75rem;
+  font-size: 2rem;
   color: whitesmoke;
-  font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
+  letter-spacing: 2px;
 }
 
 /* Buttons */
@@ -261,16 +261,16 @@ button.button--selected:hover {
   flex: 1;
 }
 .top__btns .speed__controlers > button {
-  padding: 2em 1em;
+  padding: 1em 1em;
 }
 .btn__minus {
-  width: 47px;
+  width: 36px;
   height: 7px;
   background: #1e1e1e;
 }
 .btn__plus {
-  width: 47px;
-  height: 10px;
+  width: 42px;
+  height: 9px;
   background: #1e1e1e;
   position: relative;
   display: grid;
@@ -290,7 +290,6 @@ button.button--selected:hover {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 0.075em;
   background-color: var(--cl-main);
   border-top: 4px solid #dadada75;
   border-left: 4px solid #e0e0e08d;
@@ -307,7 +306,7 @@ button.button--selected:hover {
   background: #EFEFEF;
   background: var(--cl-main);
   color: #1e1e1e;
-  padding: 5px;
+  padding: 0.125em 1em;
   border-bottom: 4px solid #1c1c1c66;
 }
 .speed__controlers--indicator > input {
@@ -317,9 +316,9 @@ button.button--selected:hover {
   font-family: inherit;
   font-size: 1.5rem;
   max-width: 125px;
-  height: 32px;
+  height: 1.15em;
   background: #1e1e1e;
-  margin: 0.15em 0.3em;
+  margin: 0.1em 0.3em;
   letter-spacing: 2px;
 }
 .speed__controlers--indicator > input::placeholder {
@@ -353,7 +352,7 @@ button.button--selected:hover {
 .btm__btns {
   width: 100%;
   height: 42px;
-  margin-top: 8px;
+  margin-top: 5px;
   padding: 0;
   display: flex;
   flex-direction: row;
@@ -363,7 +362,7 @@ button.button--selected:hover {
 .btm__btns > button {
   width: fit-content;
   height: 15px;
-  padding: 1.5em 0.45em;
+  padding: 1.25em 0.45em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -371,7 +370,7 @@ button.button--selected:hover {
 .btm__btns .btn__triangle__left,
 .btm__btns .btn__triangle__right {
   width: fit-content;
-  padding: 1.5em 0.45em;
+  padding: 1.25em 0.45em;
 }
 .btm__btns .btn__minus {
   width: 37px;
@@ -400,7 +399,7 @@ button.button--selected:hover {
   align-items: center;
   justify-content: center;
   flex: 1;
-  padding: 1.5em 0.45em;
+  padding: 1.25em 0.45em;
 }
 .btm__btns .btn__fastforward {
   width: 47px;
@@ -429,12 +428,11 @@ button.button--selected:hover {
 }
 .btm__btns .counter--indicator > input {
   box-sizing: border-box;
-  padding: 3px 5px;
   text-align: right;
   font-family: inherit;
   font-size: 1.5rem;
   max-width: 95%;
-  height: 42px;
+  height: 35px;
   background: #1e1e1e;
   margin: 0.15em 0.3em;
   letter-spacing: 2px;
