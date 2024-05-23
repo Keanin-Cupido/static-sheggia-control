@@ -22,7 +22,20 @@ body {
   display: grid;
   place-items: center;
   min-height: 100vh;
+  background: rgb(6, 6, 6);
+}
+
+.main__full {
+  display: grid;
+  place-items: center;
   background: rgb(24, 26, 33);
+  padding: 8em 6em;
+  width: 100%;
+  max-width: 1200px;
+  height: fit-content;
+  border-radius: 25px;
+  border: 7px inset rgba(0, 0, 0, 0.75);
+  box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.35);
   background: -moz-linear-gradient(112.1deg, rgb(20, 24, 37) 11.4%, rgb(38, 46, 72) 70.2%);
   background: -webkit-linear-gradient(112.1deg, rgb(20, 24, 37) 11.4%, rgb(38, 46, 72) 70.2%);
   background: linear-gradient(112.1deg, rgb(20, 24, 37) 11.4%, rgb(38, 46, 72) 70.2%);

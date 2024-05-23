@@ -25,95 +25,97 @@
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
   </head>
   <body>
-    <main class="main__screen">
-      <p class="panel__header">QUICKPANEL <div class="slanted__sqr1"></div><div class="slanted__sqr2"></div><div class="slanted__sqr3"></div></p>
-      <p class="panel__footer">Pro-face</p>
-      <div class="on__dot"></div>
-
-      <!-- Top -->
-      <div class="main__screen--top">
-        <div class="btn__group">
-          <button type="button" class="btn btn--single ui__changable">AUTO.</button>
-          <button type="button" class="btn btn--single ui__changable">LEIM PIMPE</button>
+    <div class="main__full">
+      <main class="main__screen">
+        <p class="panel__header">QUICKPANEL <div class="slanted__sqr1"></div><div class="slanted__sqr2"></div><div class="slanted__sqr3"></div></p>
+        <p class="panel__footer">Pro-face</p>
+        <div class="on__dot"></div>
+  
+        <!-- Top -->
+        <div class="main__screen--top">
+          <div class="btn__group">
+            <button type="button" class="btn btn--single ui__changable">AUTO.</button>
+            <button type="button" class="btn btn--single ui__changable">LEIM PIMPE</button>
+          </div>
+          <p class="speed__indicator">0</p>
+          <div class="empty"> </div>
         </div>
-        <p class="speed__indicator">0</p>
-        <div class="empty"> </div>
-      </div>
-
-      <!-- Middle -->
-      <div class="main__screen--middle">
-        <!-- <img src="./assets/2606e6e3-71d4-4bca-82f3-8fd5a1af200f.jpg" alt="machine"> -->
-        <div class="machine__grid">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+  
+        <!-- Middle -->
+        <div class="main__screen--middle">
+          <!-- <img src="./assets/2606e6e3-71d4-4bca-82f3-8fd5a1af200f.jpg" alt="machine"> -->
+          <div class="machine__grid">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
         </div>
-      </div>
-
-      <!-- Bottom -->
-      <div class="main__screen--bottom">
-        <div class="top__btns">
-          <button type="button" class="ui__changable">IDLE</button>
-          <button type="button" class="ui__changable">START</button>
-          <button type="button" class="ui__changable">FEEDER BELT</button>
-          <div class="speed__controlers">
+  
+        <!-- Bottom -->
+        <div class="main__screen--bottom">
+          <div class="top__btns">
+            <button type="button" class="ui__changable">IDLE</button>
+            <button type="button" class="ui__changable">START</button>
+            <button type="button" class="ui__changable">FEEDER BELT</button>
+            <div class="speed__controlers">
+              <button type="button">
+                <div class="btn__minus"></div>
+              </button>
+              <div class="speed__controlers--indicator">
+                <p>DBA. SPEED</p>
+                <input type="text" placeholder="4800" disabled>
+              </div>
+              <button type="button">
+                <div class="btn__plus"></div>
+              </button>
+            </div>
+            <button type="button" class="ui__changable">FEEDER</button>
+          </div>
+  
+          <!-- Mid Btns -->
+          <div class="mid__btns">
+            <button type="button" class="mid__btns--lft">PRESSBAND</button>
+            <button type="button" class="mid__btns--cntr">COUNTER</button>
+          </div>
+  
+          <!-- Btm Btns -->
+          <div class="btm__btns">
+            <button type="button" class="btn__triangle__left">
+              <div class="triangle_left"></div>
+            </button>
+            <button type="button" class="btn__triangle__right">
+              <div class="triangle_right"></div>
+            </button>
             <button type="button">
               <div class="btn__minus"></div>
             </button>
-            <div class="speed__controlers--indicator">
-              <p>DBA. SPEED</p>
-              <input type="text" placeholder="4800" disabled>
-            </div>
+            <button type="button" class="pressband__speed"></button>
+            </button>
             <button type="button">
               <div class="btn__plus"></div>
             </button>
-          </div>
-          <button type="button" class="ui__changable">FEEDER</button>
-        </div>
-
-        <!-- Mid Btns -->
-        <div class="mid__btns">
-          <button type="button" class="mid__btns--lft">PRESSBAND</button>
-          <button type="button" class="mid__btns--cntr">COUNTER</button>
-        </div>
-
-        <!-- Btm Btns -->
-        <div class="btm__btns">
-          <button type="button" class="btn__triangle__left">
-            <div class="triangle_left"></div>
-          </button>
-          <button type="button" class="btn__triangle__right">
-            <div class="triangle_right"></div>
-          </button>
-          <button type="button">
-            <div class="btn__minus"></div>
-          </button>
-          <button type="button" class="pressband__speed"></button>
-          </button>
-          <button type="button">
-            <div class="btn__plus"></div>
-          </button>
-          <button type="button" class="btn__fastforward">
-            <div class="triangle_right"></div>
-            <div class="triangle_right"></div>
-          </button>
-          <button type="button" class="pressband__run--btn ui__changable">RUN</button>
-          <div class="counter--indicator">
-            <input type="text" id="counter--indicator" placeholder="0" disabled>
+            <button type="button" class="btn__fastforward">
+              <div class="triangle_right"></div>
+              <div class="triangle_right"></div>
+            </button>
+            <button type="button" class="pressband__run--btn ui__changable">RUN</button>
+            <div class="counter--indicator">
+              <input type="text" id="counter--indicator" placeholder="0" disabled>
+            </div>
           </div>
         </div>
+      </main>
+  
+      <div class="full__screen">
+        <i class="icon-fullscreen icon-large"></i>
       </div>
-    </main>
-
-    <div class="full__screen">
-      <i class="icon-fullscreen icon-large"></i>
     </div>
   </body>
 </html>
