@@ -1,5 +1,5 @@
 :root {
-  --cl-main: hsl(40, 90%, 56%);
+  --cl-main: #f4b02a;
   --cl-main-hover: hsl(45, 90%, 60%);
   --cl-main-faded: hsl(45, 90%, 20%);
 }
@@ -22,7 +22,10 @@ body {
   display: grid;
   place-items: center;
   min-height: 100vh;
-  background: rgb(6, 6, 6);
+  background: -moz-linear-gradient(112.1deg, rgb(19, 22, 32) 11.4%, rgb(31, 37, 57) 70.2%);
+  background: -webkit-linear-gradient(112.1deg, rgb(19, 22, 32) 11.4%, rgb(31, 37, 57) 70.2%);
+  background: linear-gradient(112.1deg, rgb(19, 22, 32) 11.4%, rgb(31, 37, 57) 70.2%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#24262f",endColorstr="#3c404e",GradientType=1);
 }
 
 .main__full {
@@ -36,10 +39,6 @@ body {
   border-radius: 25px;
   border: 7px inset rgba(0, 0, 0, 0.75);
   box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.35);
-  background: -moz-linear-gradient(112.1deg, rgb(20, 24, 37) 11.4%, rgb(38, 46, 72) 70.2%);
-  background: -webkit-linear-gradient(112.1deg, rgb(20, 24, 37) 11.4%, rgb(38, 46, 72) 70.2%);
-  background: linear-gradient(112.1deg, rgb(20, 24, 37) 11.4%, rgb(38, 46, 72) 70.2%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#24262f",endColorstr="#3c404e",GradientType=1);
 }
 
 /* === Misc === */
@@ -117,11 +116,12 @@ body {
   width: 100%;
   display: grid;
   place-items: center;
-  padding: 1em 0em;
+  padding: 0em 0em 0.25em 0;
+  margin-top: -4em;
 }
 img {
   width: 100%;
-  max-height: 250px;
+  max-height: 355px;
   object-fit: contain;
   object-position: center;
 }
@@ -130,17 +130,20 @@ img {
 .main__screen {
   background-color: #111111;
   width: 100%;
-  max-width: 900px;
+  max-width: 1000px;
   height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
+  padding: 0.35em 1em;
   border-top: 40px solid rgb(7, 7, 7);
   border-left: 25px solid rgb(7, 7, 7);
   border-right: 25px solid rgb(7, 7, 7);
   border-bottom: 40px solid rgb(7, 7, 7);
   border-radius: 10px;
+  outline: solid 15px #0a0a0a;
+  outline-offset: -40px;
   position: relative;
   box-shadow:
         1px 1px 2px 1px hsl(0, 0%, 50%),
